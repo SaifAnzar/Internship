@@ -1,3 +1,4 @@
+alert("Welcome to my JavaScript Task!");
 let name = "Barsharani Sahu";
 console.log("Name:", name);
 document.write("Name: " + name + "<br>");
