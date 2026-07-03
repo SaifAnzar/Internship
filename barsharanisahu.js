@@ -7,7 +7,7 @@ let age = 20;
 console.log("Age:", age);
 document.write("Age: " + age + "<br>");
 
-const college = "Your College Name";
+const college = "Regional College of Management, Bhubaneswar";
 console.log("College:", college);
 document.write("College: " + college + "<br>");
 
