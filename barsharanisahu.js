@@ -1,4 +1,3 @@
-HEAD
 // alert("Welcome to my JavaScript Task!");
 // let name = "Barsharani Sahu";
 // console.log("Name:", name);
@@ -144,4 +143,3 @@ let stringValue = "100";
 
 console.log("Using == : " + (numberValue == stringValue));
 console.log("Using === : " + (numberValue === stringValue));
- df4634694e98898602b83aefad1afbfbd9cbbe85
