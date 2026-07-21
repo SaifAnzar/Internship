@@ -1,3 +1,4 @@
+/*
 // ==========================================
 // 1. Student Information
 // ==========================================
@@ -684,3 +685,410 @@ function studentReport(studentName, htmlMarks, cssMarks, javascriptMarks, attend
 studentReport("Barsharani Sahu", 90, 85, 95, 92);
 
 studentReport("Rahul Das", 55, 65, 70, 68);
+*/
+
+// ==========================================
+// JavaScript Task 9 - Arrays + Functions + Logic Building
+// ==========================================
+
+// ==========================================
+// 1. Create an Array
+// ==========================================
+
+const students = [
+    "Barsharani",
+    "Rahul",
+    "Priya",
+    "Amit",
+    "Sneha",
+    "Rohan",
+    "Anjali",
+    "Suman",
+    "Neha",
+    "Karan"
+];
+
+console.log("Complete Students Array:");
+console.log(students);
+
+console.log("First Student:", students[0]);
+console.log("Middle Student:", students[Math.floor(students.length / 2)]);
+console.log("Last Student:", students[students.length - 1]);
+
+
+// ==========================================
+// 2. Numbers Array
+// ==========================================
+
+const numbers = [12, 25, 18, 40, 33, 56, 71, 80, 9, 100, 45, 60, 27, 14, 50];
+
+console.log("\nNumbers Array:");
+
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+
+// ==========================================
+// 3. Sum Function
+// ==========================================
+
+function calculateSum(arr) {
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    return sum;
+}
+
+let totalSum = calculateSum(numbers);
+console.log("\nTotal Sum:", totalSum);
+
+
+// ==========================================
+// 4. Average Function
+// ==========================================
+
+function calculateAverage(arr) {
+    let sum = calculateSum(arr);
+    return sum / arr.length;
+}
+
+console.log("Average:", calculateAverage(numbers));
+
+
+// ==========================================
+// 5. Largest Number
+// ==========================================
+
+function findLargest(arr) {
+
+    let largest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+
+    }
+
+    return largest;
+}
+
+console.log("Largest Number:", findLargest(numbers));
+
+
+// ==========================================
+// 6. Smallest Number
+// ==========================================
+
+function findSmallest(arr) {
+
+    let smallest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+
+    }
+
+    return smallest;
+}
+
+console.log("Smallest Number:", findSmallest(numbers));
+
+
+// ==========================================
+// 7. Even and Odd Counter
+// ==========================================
+
+function countEvenOdd(arr) {
+
+    let even = 0;
+    let odd = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] % 2 === 0) {
+            even++;
+        } else {
+            odd++;
+        }
+
+    }
+
+    console.log("Total Even Numbers:", even);
+    console.log("Total Odd Numbers:", odd);
+
+}
+
+countEvenOdd(numbers);
+
+
+// ==========================================
+// 8. Search an Element
+// ==========================================
+
+function searchElement(arr, value) {
+
+    let found = false;
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] === value) {
+            found = true;
+            break;
+        }
+
+    }
+
+    if (found) {
+        console.log(value, "- Element Found");
+    } else {
+        console.log(value, "- Element Not Found");
+    }
+
+}
+
+searchElement(numbers, 40);
+searchElement(numbers, 99);
+
+
+// ==========================================
+// 9. Reverse Printing
+// ==========================================
+
+function reverseArray(arr) {
+
+    console.log("\nReverse Order:");
+
+    for (let i = arr.length - 1; i >= 0; i--) {
+        console.log(arr[i]);
+    }
+
+}
+
+reverseArray(numbers);
+
+
+// ==========================================
+// 10. Student Marks Report
+// ==========================================
+
+const studentNames = [
+    "Barsharani",
+    "Rahul",
+    "Priya",
+    "Amit",
+    "Sneha"
+];
+
+const studentMarks = [92, 35, 78, 60, 45];
+
+console.log("\nStudent Marks Report");
+
+for (let i = 0; i < studentNames.length; i++) {
+
+    let status;
+
+    if (studentMarks[i] >= 40) {
+        status = "Passed";
+    } else {
+        status = "Failed";
+    }
+
+    console.log(studentNames[i] + " - " + studentMarks[i] + " - " + status);
+
+}
+
+
+// ==========================================
+// 11. Grade Report
+// ==========================================
+
+console.log("\nGrade Report");
+
+for (let i = 0; i < studentMarks.length; i++) {
+
+    let grade;
+
+    if (studentMarks[i] >= 90) {
+        grade = "A+";
+    } else if (studentMarks[i] >= 80) {
+        grade = "A";
+    } else if (studentMarks[i] >= 70) {
+        grade = "B";
+    } else if (studentMarks[i] >= 60) {
+        grade = "C";
+    } else if (studentMarks[i] >= 40) {
+        grade = "D";
+    } else {
+        grade = "Fail";
+    }
+
+    console.log(studentNames[i] + " : Grade " + grade);
+
+}
+
+
+// ==========================================
+// 12. Attendance Report
+// ==========================================
+
+const attendanceArray = [95, 82, 72, 58, 91];
+
+console.log("\nAttendance Report");
+
+for (let i = 0; i < attendance.length; i++) {
+
+    let status;
+
+    if (attendance[i] >= 90) {
+        status = "Excellent Attendance";
+    } else if (attendance[i] >= 75) {
+        status = "Good Attendance";
+    } else if (attendance[i] >= 60) {
+        status = "Average Attendance";
+    } else {
+        status = "Poor Attendance";
+    }
+
+    console.log(studentNames[i] + " - " + attendance[i] + "% - " + status);
+
+}
+
+
+// ==========================================
+// 13. Multiplication Tables
+// ==========================================
+
+const tableNumbers = [2, 3, 4, 5];
+
+function printMultiplicationTable(number) {
+
+    console.log("\nTable of " + number);
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(number + " x " + i + " = " + (number * i));
+    }
+
+}
+
+for (let i = 0; i < tableNumbers.length; i++) {
+    printMultiplicationTable(tableNumbers[i]);
+}
+
+
+// ==========================================
+// 14. Positive, Negative and Zero
+// ==========================================
+
+const values = [-10, 15, 0, 22, -5, 8, 0, -12, 30];
+
+function countValues(arr) {
+
+    let positive = 0;
+    let negative = 0;
+    let zero = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] > 0) {
+            positive++;
+        } else if (arr[i] < 0) {
+            negative++;
+        } else {
+            zero++;
+        }
+
+    }
+
+    console.log("\nPositive Numbers:", positive);
+    console.log("Negative Numbers:", negative);
+    console.log("Zero Values:", zero);
+
+}
+
+countValues(values);
+
+
+// ==========================================
+// 15. Bonus Challenge
+// ==========================================
+
+const htmlMarksArray = [90, 35, 80, 65, 50];
+const cssMarksArray = [88, 40, 75, 60, 55];
+const javascriptMarksArray = [95, 30, 82, 70, 45];
+
+function generateStudentReport(names, html, css, js, attendanceArray) {
+
+    console.log("\n========== Student Report ==========");
+
+    for (let i = 0; i < names.length; i++) {
+
+        let total = html[i] + css[i] + js[i];
+        let average = total / 3;
+
+        let grade;
+
+        if (average >= 90) {
+            grade = "A+";
+        } else if (average >= 80) {
+            grade = "A";
+        } else if (average >= 70) {
+            grade = "B";
+        } else if (average >= 60) {
+            grade = "C";
+        } else if (average >= 40) {
+            grade = "D";
+        } else {
+            grade = "Fail";
+        }
+
+        let passStatus;
+
+        if (average >= 40) {
+            passStatus = "Pass";
+        } else {
+            passStatus = "Fail";
+        }
+
+        let attendanceStatus;
+
+        if (attendanceArray[i] >= 90) {
+            attendanceStatus = "Excellent";
+        } else if (attendanceArray[i] >= 75) {
+            attendanceStatus = "Good";
+        } else if (attendanceArray[i] >= 60) {
+            attendanceStatus = "Average";
+        } else {
+            attendanceStatus = "Poor";
+        }
+
+        console.log("\nStudent:", names[i]);
+        console.log("HTML Marks:", html[i]);
+        console.log("CSS Marks:", css[i]);
+        console.log("JavaScript Marks:", js[i]);
+        console.log("Total:", total);
+        console.log("Average:", average);
+        console.log("Grade:", grade);
+        console.log("Result:", passStatus);
+        console.log("Attendance:", attendanceArray[i] + "%");
+        console.log("Attendance Status:", attendanceStatus);
+
+    }
+
+}
+
+generateStudentReport(
+    studentNames,
+    htmlMarksArray,
+    cssMarksArray,
+    javascriptMarksArray,
+    attendanceArray
+);
