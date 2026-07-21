@@ -712,7 +712,7 @@ console.log("Complete Students Array:");
 console.log(students);
 
 console.log("First Student:", students[0]);
-console.log("Middle Student:", students[Math.floor(students.length / 2)]);
+console.log("Middle Student:", students[5]);
 console.log("Last Student:", students[students.length - 1]);
 
 
